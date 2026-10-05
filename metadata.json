@@ -1,0 +1,6 @@
+{
+  "name": "IPA Interiors International — Digital Estate Platform",
+  "description": "Production digital estate connecting Discovery, My Home client portal, Design My Space, hybrid atelier commerce, enterprise CRM & project management for IPA Interiors International Ltd.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

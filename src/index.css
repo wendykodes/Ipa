@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --ipa-rosewood: #801D31;
+    --ipa-rosewood-hover: #6B1727;
+    --ipa-rosewood-active: #54121F;
+    --ipa-rosewood-subtle: #FDF6F8;
+    --ipa-rosewood-border: #EED5DC;
+    --ipa-canvas: #FFFFFF;
+    --ipa-canvas-subtle: #FAF9F6;
+    --ipa-surface: #FFFFFF;
+    --ipa-border: #EDE8E1;
+    --ipa-text-primary: #1C1917;
+    --ipa-text-secondary: #44403C;
+    --ipa-text-muted: #78716C;
+  }
+
+  body {
+    background-color: #FAF9F6;
+    color: #1C1917;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: #FDF6F8;
+    color: #801D31;
+  }
+}
+
+/* === LUXURY EDITORIAL TYPOGRAPHY SYSTEM === */
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Display statements: editorial presence */
+.type-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+}
+
+/* Section titles */
+.type-h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 350;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.type-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.18;
+}
+
+.type-h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* Small uppercase editorial eyebrow / category tags */
+.type-eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  color: #801D31;
+}
+
+/* Comfortable editorial body */
+.type-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #44403C;
+  font-weight: 300;
+}
+
+.type-body-sm {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: #57534E;
+}
+
+.type-meta {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Architectural Hairline Dividers */
+.hairline {
+  border-color: #EDE8E1;
+}
+
+.hairline-rosewood {
+  border-color: #EED5DC;
+}
+
+/* Five-Star Architectural Buttons (Zero Pill, Controlled Geometry) */
+.btn-primary-rosewood {
+  background-color: #801D31;
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.9rem 2.2rem;
+  border-radius: 0.125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 2px rgba(128, 29, 49, 0.12);
+  cursor: pointer;
+}
+
+.btn-primary-rosewood:hover {
+  background-color: #6B1727;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(128, 29, 49, 0.2);
+}
+
+.btn-primary-rosewood:active {
+  background-color: #54121F;
+  transform: translateY(0);
+}
+
+.btn-secondary-architectural {
+  background-color: transparent;
+  border: 1px solid #1C1917;
+  color: #1C1917;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.9rem 2.2rem;
+  border-radius: 0.125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-secondary-architectural:hover {
+  background-color: #1C1917;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.btn-outline-rosewood {
+  background-color: transparent;
+  border: 1px solid #801D31;
+  color: #801D31;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  border-radius: 0.125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-outline-rosewood:hover {
+  background-color: #FDF6F8;
+  border-color: #6B1727;
+}
+
+/* Custom architectural scrollbars on white/ivory canvas */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C8;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A29E;
+}

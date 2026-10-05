@@ -1,0 +1,63 @@
+<svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldOuterRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFBA67" />
+      <stop offset="25%" stop-color="#F7E7B4" />
+      <stop offset="50%" stop-color="#C59B3F" />
+      <stop offset="75%" stop-color="#EAD397" />
+      <stop offset="100%" stop-color="#A37A24" />
+    </linearGradient>
+
+    <linearGradient id="goldDiamond" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2D1" />
+      <stop offset="35%" stop-color="#E5BE64" />
+      <stop offset="70%" stop-color="#B3862B" />
+      <stop offset="100%" stop-color="#D9B156" />
+    </linearGradient>
+
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2C275" />
+      <stop offset="50%" stop-color="#FFF4D6" />
+      <stop offset="100%" stop-color="#D4A745" />
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Obsidian Background Disc -->
+  <circle cx="250" cy="250" r="248" fill="#0A0908" />
+
+  <!-- Outer Metallic Gold Border Ring -->
+  <circle cx="250" cy="250" r="228" stroke="url(#goldOuterRing)" stroke-width="12" fill="none" />
+
+  <!-- Inner Gold Accent Ring -->
+  <circle cx="250" cy="250" r="212" stroke="url(#goldOuterRing)" stroke-width="3.5" fill="none" stroke-opacity="0.85" />
+
+  <!-- TOP EMBLEM: FACETED GOLD DIAMOND -->
+  <g transform="translate(250, 142)">
+    <line x1="-58" y1="-44" x2="58" y2="-44" stroke="url(#goldDiamond)" stroke-width="6" stroke-linecap="round" />
+    <path d="M -58 -44 L -92 -18 L 0 62 L 92 -18 L 58 -44 Z" stroke="url(#goldDiamond)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+    <line x1="-92" y1="-18" x2="92" y2="-18" stroke="url(#goldDiamond)" stroke-width="5" />
+    <line x1="-24" y1="-44" x2="-44" y2="-18" stroke="url(#goldDiamond)" stroke-width="5" />
+    <line x1="24" y1="-44" x2="44" y2="-18" stroke="url(#goldDiamond)" stroke-width="5" />
+    <line x1="-24" y1="-44" x2="0" y2="-18" stroke="url(#goldDiamond)" stroke-width="5" />
+    <line x1="24" y1="-44" x2="0" y2="-18" stroke="url(#goldDiamond)" stroke-width="5" />
+    <path d="M -44 -18 Q -20 22 0 62 Q 20 22 44 -18" stroke="url(#goldDiamond)" stroke-width="5" fill="none" />
+    <line x1="0" y1="-18" x2="0" y2="62" stroke="url(#goldDiamond)" stroke-width="5" />
+    <path d="M -92 -18 Q -50 20 0 62 Q 50 20 92 -18" stroke="url(#goldDiamond)" stroke-width="4" fill="none" opacity="0.8" />
+  </g>
+
+  <!-- CENTER LOGO TEXT: 'IPA' -->
+  <g id="IPA-Letters">
+    <!-- Letter 'I' -->
+    <path d="M 168 232 L 186 232 L 186 324 L 168 324 Z" fill="#FFFFFF" />
+    <!-- Letter 'P' -->
+    <path d="M 204 232 L 244 232 C 265 232 278 243 278 261 C 278 279 265 290 244 290 L 222 290 L 222 324 L 204 324 Z M 222 249 L 222 273 L 242 273 C 253 273 260 268 260 261 C 260 254 253 249 242 249 Z" fill="#FFFFFF" />
+    <!-- Letter 'A' (Greek Delta Triangle) -->
+    <path d="M 296 324 L 333 232 L 370 324 Z M 333 262 L 314 310 L 352 310 Z" fill="#FFFFFF" />
+  </g>
+
+  <!-- SUB-BRAND: INTERIORS INTERNATIONAL LTD. -->
+  <text x="250" y="346" text-anchor="middle" fill="url(#goldText)" font-size="15.5" font-weight="700" letter-spacing="4.5" font-family="system-ui, -apple-system, sans-serif">INTERIORS INTERNATIONAL LTD.</text>
+
+  <!-- TAGLINE: "For a touch of class" -->
+  <text x="250" y="368" text-anchor="middle" fill="#EAD397" font-size="18.5" font-style="italic" font-weight="400" font-family="Georgia, 'Times New Roman', serif" letter-spacing="1">"For a touch of class"</text>
+</svg>

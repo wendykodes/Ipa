@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">IPA Interiors</string>
+    <string name="title_activity_main">IPA Interiors</string>
+    <string name="package_name">com.ipainteriors.app</string>
+    <string name="custom_url_scheme">ipa</string>
+</resources>
