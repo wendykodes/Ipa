@@ -28,7 +28,7 @@ export const MasterNavigation: React.FC = () => {
   const navLinks = [
     { to: '/projects', label: 'Projects' },
     { to: '/design-my-space', label: 'Design Studio' },
-    { to: '/shop', label: 'The Atelier' },
+    { to: '/shop', label: 'Hardware Atelier' },
     { to: '/my-home', label: 'My Home' },
     { to: '/contact', label: 'Contact' },
   ];

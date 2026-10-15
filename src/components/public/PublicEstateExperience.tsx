@@ -333,87 +333,100 @@ export const PublicEstateExperience: React.FC<PublicEstateExperienceProps> = ({
         </div>
       </section>
 
-      {/* 4. THE ATELIER COLLECTION (COMMERCE & COMMISSIONING) */}
-      <section className="py-28 lg:py-36 max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-[#EDE8E1] pb-8">
-          <div>
-            <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-[#801D31] font-semibold block">
-              The Atelier Collection
-            </span>
-            <h2 className="font-serif-luxury text-3xl sm:text-5xl font-light text-stone-900 mt-1">
-              Bespoke Furniture & Surfaces
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600 mt-2 max-w-lg font-light leading-relaxed">
-              Curated architectural pieces designed exclusively by IPA Interiors and hand-crafted in our Kampala joinery atelier and Italian stone quarries.
-            </p>
+      {/* 4. THE PRECISION ARCHITECTURAL HARDWARE (DEADPAN ZERO-COMPUTE SHOWCASE) */}
+      <section className="py-24 lg:py-32 bg-[#09090B] text-neutral-100 border-y border-neutral-800 tech-grid-dark relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-neutral-800 pb-8">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2.5 text-[11px] font-mono-tech uppercase tracking-[0.22em] text-cork-400">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>IPA Precision Systems // Physical Architecture</span>
+                <span className="text-neutral-600">/</span>
+                <span className="text-neutral-400">Zero Compute</span>
+              </div>
+              <h2 className="font-display-tech text-3xl sm:text-5xl font-extrabold uppercase text-white tracking-tight">
+                Architectural Hardware Substrates
+              </h2>
+              <p className="text-xs sm:text-sm text-neutral-400 max-w-xl font-light leading-relaxed">
+                Zero microcontrollers, zero tokens, zero cloud latency. Natural Italian Arabescato stone, bouclé, and smoked eucalyptus engineered as physical computing apparatuses.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Link
+                to="/shop"
+                className="px-5 py-3 bg-cork-500 hover:bg-[#B57C56] text-black font-mono-tech text-xs uppercase tracking-[0.18em] font-bold rounded-[2px] transition-all cursor-pointer flex items-center gap-2"
+              >
+                <span>Launch Hardware Matrix</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
 
-          <Link
-            to="/shop"
-            className="text-xs uppercase font-mono tracking-[0.2em] text-[#801D31] font-semibold flex items-center gap-2 hover:opacity-80 transition-opacity"
-          >
-            <span>Explore All Atelier Works</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
+          {/* 4-Column Precision Product Matrix */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {products.slice(0, 4).map((prod) => {
+              const isSaved = savedProductIds.includes(prod.id);
+              return (
+                <div
+                  key={prod.id}
+                  className="group flex flex-col justify-between space-y-4 bg-[#121216] border border-neutral-800 hover:border-neutral-700 transition-all rounded-[2px] p-4"
+                >
+                  <div className="relative aspect-[4/5] bg-neutral-900 border border-neutral-800/80 overflow-hidden rounded-[1px]">
+                    <img
+                      src={prod.heroImage}
+                      alt={prod.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <button
+                      onClick={() => toggleSaveProduct(prod.id)}
+                      className={`absolute top-2.5 right-2.5 p-2 backdrop-blur-md transition-colors cursor-pointer border ${
+                        isSaved
+                          ? 'bg-cork-500 text-black border-cork-500'
+                          : 'bg-black/80 text-neutral-300 border-neutral-700 hover:text-white'
+                      }`}
+                      title={isSaved ? "Saved to your space" : "Save to my space"}
+                    >
+                      <Bookmark className="w-3.5 h-3.5" />
+                    </button>
+                    <div className="absolute top-2.5 left-2.5 text-[9px] font-mono-tech uppercase tracking-widest text-emerald-400 bg-black/85 backdrop-blur-md px-2 py-0.5 border border-neutral-700/80">
+                      0 TOKENS
+                    </div>
+                    <div className="absolute bottom-2.5 left-2.5 text-[9px] font-mono-tech uppercase tracking-widest text-neutral-300 bg-black/85 backdrop-blur-md px-2 py-0.5 border border-neutral-700/80">
+                      {prod.sku}
+                    </div>
+                  </div>
 
-        {/* 4-Column High-End Product Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.slice(0, 4).map((prod) => {
-            const isSaved = savedProductIds.includes(prod.id);
-            return (
-              <div
-                key={prod.id}
-                className="group flex flex-col justify-between space-y-4 border-b border-[#EDE8E1] pb-6"
-              >
-                <div className="relative aspect-[4/5] bg-stone-100 border border-[#EDE8E1] overflow-hidden">
-                  <img
-                    src={prod.heroImage}
-                    alt={prod.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <button
-                    onClick={() => toggleSaveProduct(prod.id)}
-                    className={`absolute top-3 right-3 p-2.5 backdrop-blur-md transition-colors cursor-pointer border ${
-                      isSaved
-                        ? 'bg-[#801D31] text-white border-[#801D31]'
-                        : 'bg-white/90 text-stone-700 border-[#EDE8E1] hover:text-[#801D31]'
-                    }`}
-                    title={isSaved ? "Saved to your space" : "Save to my space"}
-                  >
-                    <Bookmark className="w-3.5 h-3.5" />
-                  </button>
-                  <div className="absolute bottom-3 left-3 text-[10px] font-mono uppercase tracking-[0.2em] text-stone-700 bg-white/95 px-2.5 py-1 border border-[#EDE8E1]">
-                    {prod.category}
+                  <div className="space-y-2">
+                    <div className="text-[10px] font-mono-tech uppercase tracking-wider text-cork-400">
+                      {prod.category} · {prod.provenance.split(',')[0]}
+                    </div>
+                    <h3 className="font-display-tech text-lg font-bold uppercase text-white group-hover:text-cork-400 transition-colors leading-snug">
+                      {prod.title}
+                    </h3>
+                    <p className="text-xs text-neutral-400 line-clamp-2 leading-relaxed font-light">
+                      {prod.subtitle}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 flex items-center justify-between border-t border-neutral-800 text-xs font-mono-tech">
+                    <div>
+                      <span className="text-[9px] text-neutral-500 block uppercase">Hardware Cost</span>
+                      <span className="font-mono-tech text-sm font-bold text-white tabular-nums">
+                        {formatMoney(prod.basePriceUgx, currency)}
+                      </span>
+                    </div>
+                    <Link
+                      to={`/products/${prod.id}`}
+                      className="px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-[10px] uppercase font-mono-tech tracking-wider rounded-[2px] transition-colors"
+                    >
+                      Specs →
+                    </Link>
                   </div>
                 </div>
-
-                <div className="space-y-1.5">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-stone-400">
-                    {prod.provenance.split(',')[0]}
-                  </div>
-                  <h3 className="font-serif-luxury text-xl font-light text-stone-900 group-hover:text-[#801D31] transition-colors leading-snug">
-                    {prod.title}
-                  </h3>
-                  <p className="text-xs text-stone-500 line-clamp-2 leading-relaxed font-light">
-                    {prod.subtitle}
-                  </p>
-                </div>
-
-                <div className="pt-3 flex items-center justify-between border-t border-[#EDE8E1] text-xs">
-                  <span className="font-mono text-sm font-semibold text-stone-900 tabular-nums">
-                    {formatMoney(prod.basePriceUgx, currency)}
-                  </span>
-                  <Link
-                    to={`/products/${prod.id}`}
-                    className="text-[10px] uppercase font-mono tracking-[0.18em] text-[#801D31] font-semibold hover:underline"
-                  >
-                    Specify →
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </section>
 
